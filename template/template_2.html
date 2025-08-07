@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{{name}} - Resume</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0;
+            line-height: 1.5;
+            color: #2c3e50;
+            background: #f8f9fa;
+        }
+        .container {
+            background: white;
+            margin: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+        .name {
+            font-size: 32px;
+            font-weight: 300;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+        .contact {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+        .contact a {
+            color: #fff;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(255,255,255,0.3);
+            transition: border-bottom 0.3s;
+        }
+        .contact a:hover {
+            border-bottom: 1px solid #fff;
+        }
+        .summary {
+            margin-top: 20px;
+            padding: 20px 0 0 0;
+            border-top: 1px solid rgba(255,255,255,0.3);
+            font-size: 16px;
+            line-height: 1.6;
+            opacity: 0.95;
+            font-style: italic;
+        }
+        .content {
+            padding: 30px;
+        }
+        .resume-section {
+            margin-bottom: 40px;
+        }
+        .section-title {
+            font-size: 22px;
+            font-weight: 600;
+            color: #5a67d8;
+            margin-bottom: 20px;
+            padding-bottom: 8px;
+            border-bottom: 3px solid #e2e8f0;
+            position: relative;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+        }
+        .item {
+            margin-bottom: 25px;
+            background: #f7fafc;
+            padding: 20px;
+            border-radius: 6px;
+            border-left: 4px solid #cbd5e0;
+            transition: all 0.3s ease;
+        }
+        .item:hover {
+            border-left-color: #5a67d8;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+            flex-wrap: wrap;
+        }
+        .item-name {
+            font-weight: 600;
+            font-size: 18px;
+            color: #2d3748;
+        }
+        .period {
+            font-size: 14px;
+            color: #718096;
+            background: #e2e8f0;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-weight: 500;
+        }
+        .title {
+            font-weight: 500;
+            color: #4a5568;
+            margin-bottom: 12px;
+            font-size: 16px;
+            font-style: italic;
+        }
+        .bullets {
+            margin: 0;
+            padding-left: 0;
+            list-style: none;
+        }
+        .bullets li {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+            color: #4a5568;
+        }
+        .bullets li::before {
+            content: '▶';
+            position: absolute;
+            left: 0;
+            color: #5a67d8;
+            font-size: 12px;
+        }
+        /* Responsive design */
+        @media (max-width: 600px) {
+            .item-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .period {
+                margin-top: 5px;
+            }
+            .container {
+                margin: 10px;
+            }
+            .header {
+                padding: 30px 20px;
+            }
+            .content {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="name">{{name}}</div>
+            <div class="contact">
+                {% for contact in contact_info %}
+                    {% if contact.type == "email" %}
+                        <a href="mailto:{{ contact.info }}">{{ contact.info }}</a>
+                    {% elif contact.type == "link" %}
+                        <a href="https://{{ contact.info }}" target="_blank">{{ contact.info }}</a>
+                    {% else %}
+                        {{ contact.info }}
+                    {% endif %}
+                    {% if not loop.last %} • {% endif %}
+                {% endfor %}
+            </div>
+            {% if summary and summary.strip() %}
+            <div class="summary">
+                {{ summary }}
+            </div>
+            {% endif %}
+        </div>
+
+        <div class="content">
+            {% for section in sections %}
+            <section class="resume-section">
+                <h2 class="section-title">{{section.label}}</h2>
+                {% for item in section.content %}
+                <div class="item">
+                    <div class="item-header">
+                        <span class="item-name">{{item.name}}</span>
+                        {% if item.period %}<span class="period">{{item.period}}</span>{% endif %}
+                    </div>
+                    {% if item.title %}
+                    <div class="title">{{item.title}}</div>
+                    {% endif %}
+                    {% if item.bullets %}
+                    <ul class="bullets">
+                        {% for bullet in item.bullets %}
+                        <li>{{bullet}}</li>
+                        {% endfor %}
+                    </ul>
+                    {% endif %}
+                </div>
+                {% endfor %}
+            </section>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>

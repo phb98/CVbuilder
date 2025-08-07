@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Mary Ann Thompson - Resume</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0;
+            line-height: 1.5;
+            color: #2c3e50;
+            background: #f8f9fa;
+        }
+        .container {
+            background: white;
+            margin: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+        .name {
+            font-size: 32px;
+            font-weight: 300;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+        .contact {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+        .contact a {
+            color: #fff;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(255,255,255,0.3);
+            transition: border-bottom 0.3s;
+        }
+        .contact a:hover {
+            border-bottom: 1px solid #fff;
+        }
+        .summary {
+            margin-top: 20px;
+            padding: 20px 0 0 0;
+            border-top: 1px solid rgba(255,255,255,0.3);
+            font-size: 16px;
+            line-height: 1.6;
+            opacity: 0.95;
+            font-style: italic;
+        }
+        .content {
+            padding: 30px;
+        }
+        .resume-section {
+            margin-bottom: 40px;
+        }
+        .section-title {
+            font-size: 22px;
+            font-weight: 600;
+            color: #5a67d8;
+            margin-bottom: 20px;
+            padding-bottom: 8px;
+            border-bottom: 3px solid #e2e8f0;
+            position: relative;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+        }
+        .item {
+            margin-bottom: 25px;
+            background: #f7fafc;
+            padding: 20px;
+            border-radius: 6px;
+            border-left: 4px solid #cbd5e0;
+            transition: all 0.3s ease;
+        }
+        .item:hover {
+            border-left-color: #5a67d8;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+            flex-wrap: wrap;
+        }
+        .item-name {
+            font-weight: 600;
+            font-size: 18px;
+            color: #2d3748;
+        }
+        .period {
+            font-size: 14px;
+            color: #718096;
+            background: #e2e8f0;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-weight: 500;
+        }
+        .title {
+            font-weight: 500;
+            color: #4a5568;
+            margin-bottom: 12px;
+            font-size: 16px;
+            font-style: italic;
+        }
+        .bullets {
+            margin: 0;
+            padding-left: 0;
+            list-style: none;
+        }
+        .bullets li {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+            color: #4a5568;
+        }
+        .bullets li::before {
+            content: '▶';
+            position: absolute;
+            left: 0;
+            color: #5a67d8;
+            font-size: 12px;
+        }
+        /* Responsive design */
+        @media (max-width: 600px) {
+            .item-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .period {
+                margin-top: 5px;
+            }
+            .container {
+                margin: 10px;
+            }
+            .header {
+                padding: 30px 20px;
+            }
+            .content {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="name">Mary Ann Thompson</div>
+            <div class="contact">
+                
+                    
+                        <a href="mailto:maryann.thompson@email.com">maryann.thompson@email.com</a>
+                    
+                     • 
+                
+                    
+                        <a href="https://github.com/maryannthompson" target="_blank">github.com/maryannthompson</a>
+                    
+                     • 
+                
+                    
+                        Austin, TX
+                    
+                    
+                
+            </div>
+            
+            <div class="summary">
+                Recent Computer Science graduate with focus on embedded systems and IoT development. Experienced in C/C++, microcontroller programming, and hardware-software integration through academic projects and internships.
+            </div>
+            
+        </div>
+
+        <div class="content">
+            
+            <section class="resume-section">
+                <h2 class="section-title">Education</h2>
+                
+                <div class="item">
+                    <div class="item-header">
+                        <span class="item-name">University of Texas at Austin</span>
+                        <span class="period">08/2020 - 05/2024</span>
+                    </div>
+                    
+                    
+                    <ul class="bullets">
+                        
+                        <li>Bachelor of Science in Computer Science</li>
+                        
+                        <li>Concentration: Embedded Systems</li>
+                        
+                        <li>GPA: 3.6/4.0</li>
+                        
+                        <li>Relevant Coursework: Embedded Systems, Computer Architecture, Digital Logic Design, Real-Time Systems</li>
+                        
+                    </ul>
+                    
+                </div>
+                
+            </section>
+            
+            <section class="resume-section">
+                <h2 class="section-title">Experience</h2>
+                
+                <div class="item">
+                    <div class="item-header">
+                        <span class="item-name">TechStart Solutions</span>
+                        <span class="period">06/2023 - 08/2023</span>
+                    </div>
+                    
+                    <div class="title">Embedded Software Intern</div>
+                    
+                    
+                    <ul class="bullets">
+                        
+                        <li>Developed firmware for IoT sensor nodes using ARM Cortex-M microcontrollers</li>
+                        
+                        <li>Implemented I2C and SPI communication protocols for sensor integration</li>
+                        
+                        <li>Created automated testing scripts reducing validation time by 30%</li>
+                        
+                        <li>Collaborated with hardware team on PCB bring-up and debugging</li>
+                        
+                    </ul>
+                    
+                </div>
+                
+                <div class="item">
+                    <div class="item-header">
+                        <span class="item-name">UT Robotics Lab</span>
+                        <span class="period">01/2023 - 05/2023</span>
+                    </div>
+                    
+                    <div class="title">Research Assistant</div>
+                    
+                    
+                    <ul class="bullets">
+                        
+                        <li>Programmed Arduino and Raspberry Pi for autonomous robot navigation</li>
+                        
+                        <li>Developed real-time control algorithms for motor control systems</li>
+                        
+                        <li>Assisted in lab equipment maintenance and student mentoring</li>
+                        
+                    </ul>
+                    
+                </div>
+                
+            </section>
+            
+            <section class="resume-section">
+                <h2 class="section-title">Skills</h2>
+                
+                <div class="item">
+                    <div class="item-header">
+                        <span class="item-name">Programming Languages</span>
+                        
+                    </div>
+                    
+                    
+                    <ul class="bullets">
+                        
+                        <li>C/C++ (Advanced)</li>
+                        
+                        <li>Python (Intermediate)</li>
+                        
+                        <li>Assembly (ARM, x86)</li>
+                        
+                        <li>MATLAB/Simulink</li>
+                        
+                    </ul>
+                    
+                </div>
+                
+                <div class="item">
+                    <div class="item-header">
+                        <span class="item-name">Embedded Systems</span>
+                        
+                    </div>
+                    
+                    
+                    <ul class="bullets">
+                        
+                        <li>Microcontrollers (ARM, AVR, PIC)</li>
+                        
+                        <li>RTOS (FreeRTOS)</li>
+                        
+                        <li>Communication Protocols (I2C, SPI, UART, CAN)</li>
+                        
+                        <li>Hardware debugging tools (oscilloscope, logic analyzer)</li>
+                        
+                    </ul>
+                    
+                </div>
+                
+                <div class="item">
+                    <div class="item-header">
+                        <span class="item-name">Tools &amp; Platforms</span>
+                        
+                    </div>
+                    
+                    
+                    <ul class="bullets">
+                        
+                        <li>Arduino, Raspberry Pi</li>
+                        
+                        <li>Keil uVision, STM32CubeIDE</li>
+                        
+                        <li>Git, JIRA</li>
+                        
+                        <li>Altium Designer (basic)</li>
+                        
+                    </ul>
+                    
+                </div>
+                
+            </section>
+            
+            <section class="resume-section">
+                <h2 class="section-title">Projects</h2>
+                
+                <div class="item">
+                    <div class="item-header">
+                        <span class="item-name">Smart Home Energy Monitor</span>
+                        <span class="period">09/2023 - 12/2023</span>
+                    </div>
+                    
+                    <div class="title">Senior Capstone Project</div>
+                    
+                    
+                    <ul class="bullets">
+                        
+                        <li>Designed and built IoT device for real-time power consumption monitoring</li>
+                        
+                        <li>Implemented wireless data transmission using ESP32 and WiFi</li>
+                        
+                        <li>Created mobile app interface for data visualization</li>
+                        
+                        <li>Achieved 95% accuracy in power measurement compared to commercial meters</li>
+                        
+                    </ul>
+                    
+                </div>
+                
+                <div class="item">
+                    <div class="item-header">
+                        <span class="item-name">Autonomous Line-Following Robot</span>
+                        <span class="period">02/2022 - 05/2022</span>
+                    </div>
+                    
+                    <div class="title">Embedded Systems Course Project</div>
+                    
+                    
+                    <ul class="bullets">
+                        
+                        <li>Programmed STM32 microcontroller for real-time sensor processing</li>
+                        
+                        <li>Implemented PID control algorithm for smooth path following</li>
+                        
+                        <li>Integrated ultrasonic sensors for obstacle detection and avoidance</li>
+                        
+                        <li>Won 2nd place in class competition for speed and accuracy</li>
+                        
+                    </ul>
+                    
+                </div>
+                
+            </section>
+            
+            <section class="resume-section">
+                <h2 class="section-title">Interests</h2>
+                
+                <div class="item">
+                    <div class="item-header">
+                        <span class="item-name">Personal Interests</span>
+                        
+                    </div>
+                    
+                    
+                    <ul class="bullets">
+                        
+                        <li>Passionate about electronics and making, building custom mechanical keyboards with hand-soldered switches and designing 3D printed enclosures for personal projects. Active member of Austin Makers space where I teach Arduino workshops. Enjoy outdoor activities including rock climbing at local crags and indoor gyms, hiking Texas state parks while documenting wildlife through photography, and volunteering for trail maintenance with Hill Country Conservancy.</li>
+                        
+                    </ul>
+                    
+                </div>
+                
+            </section>
+            
+        </div>
+    </div>
+</body>
+</html>

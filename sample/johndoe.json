@@ -1,0 +1,136 @@
+{
+  "name": "John Doe",
+  "summary": "Experienced software engineer with 5+ years developing scalable web applications and microservices. Proven track record in full-stack development, cloud architecture, and team leadership. Passionate about building reliable systems that serve millions of users.",
+  "contact_info": [
+    {
+      "type": "text",
+      "info": "+81 2433 122"
+    },
+    {
+      "type": "email",
+      "info": "john.doe@email.com"
+    },
+    {
+      "type": "link",
+      "info": "linkedin.com/in/johndoe"
+    },
+    {
+      "type": "link",
+      "info": "github.com/johndoe"
+    },
+    {
+      "type": "text",
+      "info": "New York, NY"
+    }
+  ],
+  "sections": [
+    {
+      "id": "00",
+      "label": "Education",
+      "content": [
+        {
+          "name": "Massachusetts Institute of Technology",
+          "period": "09/2017 - 05/2019",
+          "title": "",
+          "bullets": [
+            "Master of Science in Computer Science",
+            "GPA: 3.8/4.0",
+            "Thesis: Distributed Systems for Machine Learning",
+            "Relevant Coursework: Advanced Algorithms, Computer Systems"
+          ]
+        },
+        {
+          "name": "University of California",
+          "period": "08/2013 - 05/2017",
+          "title": "",
+          "bullets": [
+            "Bachelor of Science in Computer Science",
+            "Magna Cum Laude, GPA: 3.7/4.0",
+            "Dean's List for 6 semesters",
+            "President of Computer Science Club"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "label": "Experience",
+      "content": [
+        {
+          "name": "Tech Solutions Inc",
+          "period": "06/2021 - Present",
+          "title": "Senior Software Engineer",
+          "bullets": [
+            "Led development of microservices architecture serving 1M+ users",
+            "Improved system performance by 40% through optimization",
+            "Mentored 5 junior developers and conducted code reviews",
+            "Implemented CI/CD pipelines reducing deployment time by 60%"
+          ]
+        },
+        {
+          "name": "StartupXYZ",
+          "period": "07/2019 - 05/2021",
+          "title": "Software Engineer",
+          "bullets": [
+            "Built RESTful APIs using Python/Django framework",
+            "Developed frontend components with React.js",
+            "Collaborated with product team on feature specifications",
+            "Maintained 99.9% uptime for production services"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "label": "Skills",
+      "content": [
+        {
+          "name": "Programming Languages",
+          "bullets": [
+            "Python (Expert)",
+            "JavaScript (Advanced)",
+            "Java (Intermediate)",
+            "SQL (Advanced)"
+          ]
+        },
+        {
+          "name": "Frameworks & Tools",
+          "bullets": [
+            "React.js, Django, Flask",
+            "AWS (EC2, S3, RDS, Lambda)",
+            "Docker, Kubernetes",
+            "Git, Jenkins, Terraform"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "label": "Projects",
+      "content": [
+        {
+          "name": "E-commerce Platform",
+          "period": "03/2023 - Present",
+          "title": "Full-stack Developer",
+          "bullets": [
+            "Built scalable e-commerce platform with React and Node.js",
+            "Implemented payment processing with Stripe API",
+            "Added real-time inventory management system",
+            "Deployed on AWS with auto-scaling capabilities"
+          ]
+        },
+        {
+          "name": "ML Price Predictor",
+          "period": "01/2022 - 04/2022",
+          "title": "Machine Learning Engineer",
+          "bullets": [
+            "Developed ML model for stock price prediction using Python",
+            "Achieved 85% accuracy using ensemble methods",
+            "Processed and analyzed 10M+ data points",
+            "Built interactive dashboard with real-time predictions"
+          ]
+        }
+      ]
+    }
+  ]
+}

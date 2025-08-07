@@ -1,0 +1,137 @@
+{
+  "name": "Mary Ann Thompson",
+  "summary": "Recent Computer Science graduate with focus on embedded systems and IoT development. Experienced in C/C++, microcontroller programming, and hardware-software integration through academic projects and internships.",
+  "contact_info": [
+    {
+      "type": "email",
+      "info": "maryann.thompson@email.com"
+    },
+    {
+      "type": "link",
+      "info": "github.com/maryannthompson"
+    },
+    {
+      "type": "text",
+      "info": "Austin, TX"
+    }
+  ],
+  "sections": [
+    {
+      "id": "00",
+      "label": "Education",
+      "content": [
+        {
+          "name": "University of Texas at Austin",
+          "period": "08/2020 - 05/2024",
+          "title": "",
+          "bullets": [
+            "Bachelor of Science in Computer Science",
+            "Concentration: Embedded Systems",
+            "GPA: 3.6/4.0",
+            "Relevant Coursework: Embedded Systems, Computer Architecture, Digital Logic Design, Real-Time Systems"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "label": "Experience",
+      "content": [
+        {
+          "name": "TechStart Solutions",
+          "period": "06/2023 - 08/2023",
+          "title": "Embedded Software Intern",
+          "bullets": [
+            "Developed firmware for IoT sensor nodes using ARM Cortex-M microcontrollers",
+            "Implemented I2C and SPI communication protocols for sensor integration",
+            "Created automated testing scripts reducing validation time by 30%",
+            "Collaborated with hardware team on PCB bring-up and debugging"
+          ]
+        },
+        {
+          "name": "UT Robotics Lab",
+          "period": "01/2023 - 05/2023",
+          "title": "Research Assistant",
+          "bullets": [
+            "Programmed Arduino and Raspberry Pi for autonomous robot navigation",
+            "Developed real-time control algorithms for motor control systems",
+            "Assisted in lab equipment maintenance and student mentoring"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "label": "Skills",
+      "content": [
+        {
+          "name": "Programming Languages",
+          "bullets": [
+            "C/C++ (Advanced)",
+            "Python (Intermediate)",
+            "Assembly (ARM, x86)",
+            "MATLAB/Simulink"
+          ]
+        },
+        {
+          "name": "Embedded Systems",
+          "bullets": [
+            "Microcontrollers (ARM, AVR, PIC)",
+            "RTOS (FreeRTOS)",
+            "Communication Protocols (I2C, SPI, UART, CAN)",
+            "Hardware debugging tools (oscilloscope, logic analyzer)"
+          ]
+        },
+        {
+          "name": "Tools & Platforms",
+          "bullets": [
+            "Arduino, Raspberry Pi",
+            "Keil uVision, STM32CubeIDE",
+            "Git, JIRA",
+            "Altium Designer (basic)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "label": "Projects",
+      "content": [
+        {
+          "name": "Smart Home Energy Monitor",
+          "period": "09/2023 - 12/2023",
+          "title": "Senior Capstone Project",
+          "bullets": [
+            "Designed and built IoT device for real-time power consumption monitoring",
+            "Implemented wireless data transmission using ESP32 and WiFi",
+            "Created mobile app interface for data visualization",
+            "Achieved 95% accuracy in power measurement compared to commercial meters"
+          ]
+        },
+        {
+          "name": "Autonomous Line-Following Robot",
+          "period": "02/2022 - 05/2022",
+          "title": "Embedded Systems Course Project",
+          "bullets": [
+            "Programmed STM32 microcontroller for real-time sensor processing",
+            "Implemented PID control algorithm for smooth path following",
+            "Integrated ultrasonic sensors for obstacle detection and avoidance",
+            "Won 2nd place in class competition for speed and accuracy"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "label": "Interests",
+      "content": [
+        {
+          "name": "Personal Interests",
+          "bullets": [
+            "Passionate about electronics and making, building custom mechanical keyboards with hand-soldered switches and designing 3D printed enclosures for personal projects. Active member of Austin Makers space where I teach Arduino workshops. Enjoy outdoor activities including rock climbing at local crags and indoor gyms, hiking Texas state parks while documenting wildlife through photography, and volunteering for trail maintenance with Hill Country Conservancy."
+          ]
+        }
+      ]
+    }
+  ]
+}
