@@ -100,3 +100,7 @@ pip3 install jinja2 jsonschema weasyprint
 
 - `name_resume.html` - HTML version
 - `name_resume.pdf` - PDF version (requires WeasyPrint)
+
+## TODO
+
+- [ ] Add a way to customize template styling (font, paragraph spacing, colors, etc.)
