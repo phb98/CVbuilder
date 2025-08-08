@@ -3,8 +3,46 @@
 import argparse
 import os
 import sys
+import subprocess
 from pathlib import Path
 from cvbuilder import generate_resume
+
+def is_chromium_available():
+    """Check if Chromium is available on the system"""
+    try:
+        result = subprocess.run(['chromium', '--version'], capture_output=True, text=True, timeout=5)
+        return result.returncode == 0
+    except (subprocess.TimeoutExpired, FileNotFoundError, Exception):
+        return False
+
+def capture_screenshot(html_path, output_path):
+    """Capture a screenshot of the HTML file using Chromium headless"""
+    try:
+        # Use chromium in headless mode to capture a screenshot
+        cmd = [
+            'chromium',
+            '--headless',
+            '--disable-gpu',
+            '--window-size=1200,1600',
+            '--screenshot=' + str(output_path),
+            'file://' + str(html_path)
+        ]
+        
+        result = subprocess.run(cmd, capture_output=True, text=True, timeout=30)
+        
+        if result.returncode == 0:
+            print(f"    Screenshot: {Path(output_path).name}")
+            return str(output_path)
+        else:
+            print(f"    ⚠ Screenshot failed: {result.stderr}")
+            return None
+            
+    except subprocess.TimeoutExpired:
+        print(f"    ⚠ Screenshot timeout for {html_path}")
+        return None
+    except Exception as e:
+        print(f"    ⚠ Screenshot error: {e}")
+        return None
 
 def main():
     parser = argparse.ArgumentParser(
@@ -63,6 +101,13 @@ Examples:
             sys.exit(1)
         print(f"Processing all configs in sample/ directory")
     
+    # Check if Chromium is available for screenshots
+    chromium_available = is_chromium_available()
+    if chromium_available:
+        print("✓ Chromium available - screenshots will be generated")
+    else:
+        print("⚠ Chromium not available - screenshots will be skipped")
+    
     print(f"Found {len(template_files)} template(s)")
     print(f"Found {len(sample_data_files)} sample data file(s)")
     print(f"Output directory: {output_dir}")
@@ -99,6 +144,13 @@ Examples:
                 print(f"  ✓ Generated {sample_name}_{template_name}")
                 if result.get('html'):
                     print(f"    HTML: {Path(result['html']).name}")
+                    
+                    # Capture screenshot for each template (only if Chromium is available)
+                    if chromium_available:
+                        html_path = Path(result['html'])
+                        screenshot_path = html_path.with_suffix('.png')
+                        capture_screenshot(html_path, screenshot_path)
+                    
                 if result.get('pdf'):
                     print(f"    PDF: {Path(result['pdf']).name}")
                 

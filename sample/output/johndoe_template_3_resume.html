@@ -5,115 +5,178 @@
     <title>John Doe - Resume</title>
     <style>
         @page {
+            margin: 0.5in;
+        }
+        * {
             margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
         body {
-            font-family: Arial, sans-serif;
-            max-width: 800px;
-            margin: 40px auto;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+            font-size: 11px;
+            line-height: 1.4;
+            color: #000;
+            background: #fff;
             padding: 20px;
-            line-height: 1.6;
-            color: #333;
+        }
+        .header {
+            border-bottom: 1px solid #000;
+            padding-bottom: 8px;
+            margin-bottom: 12px;
         }
         .name {
-            font-size: 28px;
-            font-weight: bold;
-            margin-bottom: 10px;
-            color: #2c3e50;
+            font-size: 18px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
         }
         .contact {
-            margin-bottom: 30px;
-            font-size: 16px;
-            color: #666;
+            font-size: 10px;
+            color: #333;
         }
         .contact a {
-            color: #3498db;
+            color: #000;
             text-decoration: none;
         }
+        .contact a:hover {
+            text-decoration: underline;
+        }
+        .summary {
+            margin-bottom: 12px;
+            font-size: 10px;
+            color: #333;
+            line-height: 1.3;
+        }
         .resume-section {
-            margin-bottom: 30px;
+            margin-bottom: 12px;
         }
         .section-title {
-            font-size: 20px;
-            font-weight: bold;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 5px;
-            margin-bottom: 15px;
-            color: #2c3e50;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 0.5px solid #333;
+            margin-bottom: 6px;
+            padding-bottom: 2px;
         }
         .item {
-            margin-bottom: 15px;
-            padding-left: 10px;
+            margin-bottom: 8px;
+            page-break-inside: avoid;
         }
         .item-header {
             display: flex;
             justify-content: space-between;
             align-items: baseline;
-            margin-bottom: 5px;
+            margin-bottom: 2px;
         }
         .item-name {
-            font-weight: bold;
-            font-size: 16px;
+            font-weight: 600;
+            font-size: 11px;
         }
         .period {
-            font-style: italic;
-            color: #666;
-            font-size: 14px;
+            font-size: 9px;
+            color: #555;
+            font-weight: 400;
         }
         .title {
-            font-weight: 600;
-            color: #34495e;
-            margin-bottom: 8px;
-            font-size: 15px;
+            font-size: 10px;
+            color: #333;
+            font-style: italic;
+            margin-bottom: 3px;
         }
         .bullets {
             margin: 0;
-            padding-left: 20px;
-            color: #555;
+            padding-left: 12px;
+            list-style: none;
         }
         .bullets li {
-            margin-bottom: 4px;
+            margin-bottom: 2px;
+            font-size: 10px;
+            color: #222;
+            line-height: 1.3;
+            position: relative;
         }
-        .summary {
-            margin-bottom: 30px;
-            padding: 15px;
-            background: #f8f9fa;
-            border-left: 4px solid #3498db;
-            font-style: italic;
-            color: #555;
-            line-height: 1.7;
+        .bullets li::before {
+            content: '•';
+            position: absolute;
+            left: -8px;
+            color: #000;
+            font-weight: bold;
+        }
+        /* Compact layout utilities */
+        .two-column {
+            display: flex;
+            gap: 20px;
+        }
+        .two-column > div {
+            flex: 1;
+        }
+        /* Skills/Education compact format */
+        .compact-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+        .compact-item {
+            background: #f8f8f8;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 9px;
+            border: 0.5px solid #ddd;
+        }
+        /* Print optimization */
+        @media print {
+            body {
+                font-size: 10px;
+            }
+            .name {
+                font-size: 16px;
+            }
+            .section-title {
+                font-size: 11px;
+            }
+            .item-name {
+                font-size: 10px;
+            }
+            .bullets li {
+                font-size: 9px;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="name">John Doe</div>
-    <div class="contact">
-        
+    <div class="header">
+        <div class="name">John Doe</div>
+        <div class="contact">
             
-                +81 2433 122
+                
+                    +81 2433 122
+                
+                 • 
             
-             | 
-        
+                
+                    <a href="mailto:john.doe@email.com">john.doe@email.com</a>
+                
+                 • 
             
-                <a href="mailto:john.doe@email.com">john.doe@email.com</a>
+                
+                    <a href="https://linkedin.com/in/johndoe" target="_blank">linkedin.com/in/johndoe</a>
+                
+                 • 
             
-             | 
-        
+                
+                    <a href="https://github.com/johndoe" target="_blank">github.com/johndoe</a>
+                
+                 • 
             
-                <a href="https://linkedin.com/in/johndoe" target="_blank">linkedin.com/in/johndoe</a>
+                
+                    New York, NY
+                
+                
             
-             | 
-        
-            
-                <a href="https://github.com/johndoe" target="_blank">github.com/johndoe</a>
-            
-             | 
-        
-            
-                New York, NY
-            
-            
-        
+        </div>
     </div>
 
     
@@ -319,6 +382,5 @@
         
     </section>
     
-
 </body>
 </html>
