@@ -96,10 +96,47 @@ python3 generate_samples.py sample/maryann.json
 pip3 install jinja2 jsonschema weasyprint
 ```
 
+## Sample Outputs
+
+<table>
+<tr>
+<td align="center">
+<b>Template 1</b><br/>
+<img src="sample/output/johndoe_template_1_resume.png" width="300" alt="John Doe Resume - Template 1"/><br/>
+<i>Experienced Professional</i>
+</td>
+<td align="center">
+<b>Template 2</b><br/>
+<img src="sample/output/johndoe_template_2_resume.png" width="300" alt="John Doe Resume - Template 2"/><br/>
+<i>Experienced Professional</i>
+</td>
+<td align="center">
+<b>Template 3</b><br/>
+<img src="sample/output/johndoe_template_3_resume.png" width="300" alt="John Doe Resume - Template 3"/><br/>
+<i>Experienced Professional</i>
+</td>
+</tr>
+<tr>
+<td align="center">
+<img src="sample/output/maryann_template_1_resume.png" width="300" alt="Mary Ann Resume - Template 1"/><br/>
+<i>Fresh Graduate</i>
+</td>
+<td align="center">
+<img src="sample/output/maryann_template_2_resume.png" width="300" alt="Mary Ann Resume - Template 2"/><br/>
+<i>Fresh Graduate</i>
+</td>
+<td align="center">
+<img src="sample/output/maryann_template_3_resume.png" width="300" alt="Mary Ann Resume - Template 3"/><br/>
+<i>Fresh Graduate</i>
+</td>
+</tr>
+</table>
+
 ## Output
 
 - `name_resume.html` - HTML version
 - `name_resume.pdf` - PDF version (requires WeasyPrint)
+- `name_resume.png` - Screenshot version (requires Chromium)
 
 ## TODO
 
