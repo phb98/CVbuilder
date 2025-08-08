@@ -6,7 +6,7 @@ Generate HTML and PDF resumes from JSON data using Jinja2 templates.
 
 ### Generate single resume
 ```bash
-python3 cvbuilder.py -i resume.json -t template.html -o output/
+python3 cvbuilder.py -i path-to-resume.json -t path-to-template.html -o path-to-output-dir/
 ```
 
 ### Generate samples for all templates
